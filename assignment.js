@@ -72,8 +72,3 @@ function megaFriend(list) {
 
   return output;
 }
-
-var names = ["155", "", "sabbir", false];
-console.log(megaFriend(names));
-
-console.log(names.length);
