@@ -1,4 +1,4 @@
-//first problem
+///////////////// FIRST PROBLEM
 
 function kilometerToMeter(number) {
   if (number < 0) {
@@ -9,9 +9,7 @@ function kilometerToMeter(number) {
   return output;
 }
 
-console.log(kilometerToMeter(4));
-
-//second problem
+//////////////// SECOND PROBLEM
 
 function budgetCalculator(watch, phone, laptop) {
   var eachWatch = 50;
@@ -30,9 +28,7 @@ function budgetCalculator(watch, phone, laptop) {
   return output;
 }
 
-console.log(budgetCalculator(2, -2, 1));
-
-//third problem
+////////////////// THIRD PROBLEM
 
 function hotelCost(days) {
   if (days < 0) {
@@ -52,28 +48,20 @@ function hotelCost(days) {
   return output;
 }
 
-console.log(hotelCost(5));
-
-//fourth problem
+///////////////// FOURTH PROBLEM
 
 function megaFriend(list) {
-  var largest = list[0];
+  var output = list[0];
 
   for (var i = 0; i < list.length; i++) {
     var element = list[i];
 
     if (typeof element !== "string") {
-      largest = "input an array of string only!";
+      output = "input an array of string only!";
       break;
-    } else if (element.length > largest.length) {
-      largest = element;
+    } else if (element.length > output.length) {
+      output = element;
     }
   }
-  return largest;
+  return output;
 }
-
-// var names = [15, 21, 0, 0, 58, 61, 27];
-var names = ["sabbir", "afsana", 25, "plabon"];
-console.log(megaFriend(names));
-
-console.log(typeof names[0]);
