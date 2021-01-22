@@ -53,15 +53,27 @@ function hotelCost(days) {
 function megaFriend(list) {
   var output = list[0];
 
-  for (var i = 0; i < list.length; i++) {
-    var element = list[i];
+  if (list.length === 0) {
+    output = "error!"; //if an empty array is passed it shows error
+  } else {
+    for (var i = 0; i < list.length; i++) {
+      var element = list[i];
 
-    if (typeof element !== "string") {
-      output = "input an array of string only!";
-      break;
-    } else if (element.length > output.length) {
-      output = element;
+      if (typeof element !== "string") {
+        output = "input an array of string only!";
+        break;
+        /* if any value in that array comes other than string 
+         it set the output and break the loop immedietly */
+      } else if (element.length > output.length) {
+        output = element;
+      }
     }
   }
+
   return output;
 }
+
+var names = ["155", "", "sabbir", false];
+console.log(megaFriend(names));
+
+console.log(names.length);
